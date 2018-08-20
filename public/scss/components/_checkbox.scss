@@ -1,0 +1,11 @@
+.checkbox {
+  align-items: center;
+  .fas {
+    background: $primary;
+    border-radius: $border-radius;
+    color: $light;
+    padding: 0.3rem;
+  }
+}
+
+//<div class="checkbox media"><i class="fas fa-check fa-2x"></i><div class="checkbox__info media-body p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tenetur ipsam cumque sunt nulla adipisci.</div></div>

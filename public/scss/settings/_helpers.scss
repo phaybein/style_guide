@@ -1,0 +1,14 @@
+.dark-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    min-height: 43rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5rem;
+}

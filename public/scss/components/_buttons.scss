@@ -1,0 +1,55 @@
+%btn {
+    border-radius: $border-radius;
+    padding: 10px 15px;
+    transition: $transition;
+    min-width: 8rem;
+}
+
+.btn--primary {
+    @extend %btn;
+    background: $primary;
+    box-shadow: $box-shadow;
+    color: setTextColor($primary);
+    font-weight: bolder;
+    &:hover {
+        color: #fff;
+        background: darken($primary, 5%);
+    }
+}
+
+.btn--secondary {
+    @extend %btn;
+    border: 0.01rem solid $primary;
+    color: $primary;
+    font-weight: lighter;
+    &:hover {
+        color: lighten($primary, 10);
+    }
+}
+
+.btn--third {
+    @extend %btn;
+    color: $primary;
+    opacity: 0.5;
+    text-decoration: underline;
+    &:hover {
+        color: $primary;
+        opacity: 1;
+    }
+}
+
+.btn--light {
+    @extend %btn;
+    background: darken($accent, 10);
+    color: setTextColor($accent);
+}
+
+.btn--dark {
+    @extend %btn;
+    background: $accent;
+    color: setTextColor($accent);
+}
+
+.btn--rounded {
+    border-radius: 50px;
+}

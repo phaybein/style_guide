@@ -1,0 +1,115 @@
+// font.scss
+/*
+    // fonts
+        add $variables in the _variables.scss under
+            $font-heading and $body-font
+    // montserrat
+    @import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,400,700|Montserrat:300,400,700');
+    $font-heading: 'Montserrat', sans-serif;
+    $body-font: 'Montserrat Alternates', sans-serif;
+
+    // oxygen
+    @import url('https://fonts.googleapis.com/css?family=Oxygen+Mono|Oxygen:300,400,700');
+    $font-heading: 'Oxygen Mono', monospace;
+    $body-font: 'Oxygen', sans-serif;
+
+    // roboto
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,700');
+    $font-heading: 'Roboto Condensed', sans-serif;
+    $body-font: 'Roboto', sans-serif;
+
+    // raleway
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Raleway:300,400,700');
+    $font-heading: 'Raleway', sans-serif;
+    $body-font: 'Montserrat', sans-serif;
+
+    // palanquin
+   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Palanquin:300,400,700');
+    $font-heading: 'Palanquin', sans-serif;
+    $body-font: 'Open Sans', sans-serif;
+
+    // Quattrocento
+    @import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700|Quattrocento:400,700');
+    $font-heading:  'Quattrocento', serif;
+    $body-font:'Quattrocento Sans', sans-serif;
+
+    // Encode Sans
+    @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:300,400,700|Encode+Sans:300,400,700');
+    $font-heading:  'Encode Sans Condensed', sans-serif;
+    $body-font:'Encode Sans', sans-serif;
+
+
+*/
+
+/*****
+    FLUID TEXT
+*****/
+
+html {
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.074rem;
+}
+
+h2 {
+    font-size: 1.728rem;
+}
+
+h3 {
+    font-size: 1.44rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+small {
+    font-size: 0.833rem;
+}
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 960));
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+/* /////////////////////////////////////////////////////////////////
+//  LOAD FONT
+//////////////////////////////////////////////////////////////////  */
+
+// palanquin
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Palanquin:300,400,700');
+$font-heading: 'Palanquin',
+sans-serif;
+$body-font: 'Open Sans',
+sans-serif;
+/* Load  */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-heading;
+}
+
+p {
+    max-width: 65ch;
+    margin: auto;
+}

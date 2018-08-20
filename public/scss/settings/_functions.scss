@@ -1,0 +1,10 @@
+/* Functions */
+
+@function setTextColor($bg-color) {
+    @if(lightness($bg-color) > 50) {
+        @return #424242;
+    }
+    @else {
+        @return #f7f7f7;
+    }
+}

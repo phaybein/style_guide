@@ -1,0 +1,20 @@
+// .media {
+//     box-shadow: $box-shadow;
+//     padding: 2rem 1rem;
+//     display: flex;
+//     flex-flow: row wrap;
+//     align-items: center;
+//     &__image {
+//         flex-grow: 1;
+//         margin-bottom: 2rem;
+//         min-width: 35%;
+//         @include tablet {
+//             margin-bottom: 0;
+//             margin-right: 2rem;
+//         }
+//     }
+//     &__body {
+//         flex-grow: 9999;
+//         flex-basis: 20em;
+//     }
+// }

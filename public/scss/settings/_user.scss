@@ -1,0 +1,30 @@
+.home {
+    background: url(//images.pexels.com/photos/708440/pexels-photo-708440.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 43rem;
+    .dark-overlay {
+        display: flex;
+    }
+    &__inner {
+        margin: auto;
+    }
+    &__inner {
+        grid-template-columns: 1fr;
+        padding-top: 9rem;
+        @include tablet {
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+    &__left {
+        display: none;
+        @include tablet {
+            display: block;
+        }
+    }
+    &__right {
+        .card-form {
+            opacity: 0.8;
+        }
+    }
+}
