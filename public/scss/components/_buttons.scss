@@ -1,8 +1,12 @@
 %btn {
     border-radius: $border-radius;
+    display: inline-block;
     padding: 10px 15px;
     transition: $transition;
     min-width: 8rem;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .btn--primary {

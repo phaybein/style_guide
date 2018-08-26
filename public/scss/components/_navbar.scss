@@ -1,6 +1,52 @@
+/*
+START Basic Nav with collapse 
+*/
+
 .navbar {
     border-bottom: $primary 3px solid;
     opacity: 0.8;
 }
 
 // <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"><div class="container"><a href="#" class="navbar-brand">Logo</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarCollapse"><div class="navbar-nav ml-auto"><a href="#home" class="nav-item nav-link">Home</a><a href="#explorer-head-section" class="nav-item nav-link">Explore</a><a href="#create-head-section" class="nav-item nav-link">Create</a><a href="#share-head-section" class="nav-item nav-link">Share</a></div></div></div></nav>
+/*
+END Basic Nav with collapse 
+*/
+
+/*
+START Basic Nav with collapse 
+*/
+
+// CSS
+//<nav class='cf'><ul class='cf'><li class="hide-on-small"><a href='#showcase'>myTunes</a></li><li><a href='#showcase'>Overview</a></li><li><a href='#music'>Music</a></li><li><a href='#video'>Video</a></li><li><a href='#gift-cards'>Gift Cards</a></li></ul><a href='#' id='openup'>myTunes</a></nav> // JS
+// Responsive Nav
+/*
+$(()=> {
+    let menu=$('nav ul');
+    $('#openup').on('click', function (e) {
+        e.preventDefault();
+        menu.slideToggle();
+    }
+    );
+    $(window).resize(function () {
+        let w=$(this).width();
+        if (w > 480 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    }
+    );
+    $('nav li').on('click', function (e) {
+        let w=$(window).width();
+        if (w < 480) {
+            menu.slideToggle();
+        }
+    }
+    );
+    $('.open-menu').height($(window).height());
+}
+
+);
+*/
+
+/*
+START Basic Nav with collapse 
+*/

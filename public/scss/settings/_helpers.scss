@@ -12,3 +12,33 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: .5rem;
 }
+
+img {
+    width: 100%;
+}
+
+.hide-on-small {
+    display: none;
+    margin-right: auto;
+    @include tablet {
+        display: initial;
+    }
+}
+
+.bg-light {
+    background: $light;
+    color: setTextColor($light);
+}
+
+// Text Colors
+.text-primary {
+    color: $primary;
+}
+
+.text-accent {
+    color: $accent;
+}
+
+.text-light-gray {
+    color: $light-gray;
+}
