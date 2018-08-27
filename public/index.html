@@ -34,6 +34,141 @@
     </section>
     <hr>
 
+    <!-- 3 Column Layout -->
+    <style>
+        .three-column-layout {
+            display: flex;
+        }
+
+        .flex-column {
+            flex: 1;
+            padding: 0 0.3rem;
+        }
+
+        .main-column {
+            flex: 3;
+            order: 2;
+        }
+
+        .sidebar-one {
+            order: 1;
+        }
+
+        .sidebar-two {
+            order: 3;
+        }
+    </style>
+    <section>
+        <div class="container">
+            <h2 class="text-center">3 Column Layout With Flexbox</h2>
+            <P>Using Flexbox to create a three column layout. We will also move columns without changing the HTML and only using
+                Flexbox.
+            </P>
+            <br>
+            <p>
+                <small>Example follows below</small>
+            </p>
+            <br>
+            <div class="three-column-layout">
+                <div class="main-column flex-column">
+                    <h2>Main Column</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum asperiores facere doloremque alias ab
+                        temporibus excepturi sequi error sunt vel recusandae quas, earum ipsam cum assumenda sed voluptate?
+                        Dolor, praesentium.</p>
+                    <p>Quaerat, dolorem, provident et doloremque deleniti quidem possimus repellendus culpa aperiam aut nihil
+                        numquam perspiciatis expedita dolores praesentium laudantium quas quis quos ipsam. Voluptates maiores,
+                        asperiores consectetur aspernatur est iure?</p>
+                    <p>Sequi sint provident reiciendis nesciunt in id facere placeat quaerat ipsum sunt beatae ut quasi corrupti
+                        accusantium officiis tempora blanditiis culpa fuga similique, eaque explicabo itaque! Nostrum iusto
+                        ad tenetur.</p>
+                </div>
+                <div class="sidebar-one flex-column">
+                    <h3>Sidebar One</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam reiciendis amet, maiores, saepe, explicabo
+                        odit quaerat voluptatem consectetur suscipit quia nemo ab obcaecati laborum corrupti inventore rerum
+                        laboriosam. Itaque, eius!</p>
+                </div>
+                <div class="sidebar-two flex-column">
+                    <h3>Sidebar Two</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam reiciendis amet, maiores, saepe, explicabo
+                        odit quaerat voluptatem consectetur suscipit quia nemo ab obcaecati laborum corrupti inventore rerum
+                        laboriosam. Itaque, eius!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- 3 Column Card Layout -->
+    <style>
+        @media screen and (min-width: 700px) {
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .call-out {
+            margin-bottom: 0.5rem;
+            padding: 1.5rem;
+        }
+
+        @media screen and (min-width: 700px) {
+            .call-out {
+
+                flex-basis: 30%;
+                margin-bottom: 0;
+
+            }
+        }
+
+
+
+
+
+        .call-1 {
+            background: lightcoral;
+        }
+
+        .call-2 {
+            background: lightblue;
+        }
+
+        .call-3 {
+            background: limegreen;
+        }
+    </style>
+    <section>
+        <div class="container">
+            <h2 class="text-center">Three column card layout</h2>
+            <P>This example will use Flexbox to create three equal cards with equal spacing between using flex-basis.</P>
+            <br>
+            <p>
+                <small>Example follows below</small>
+            </p>
+            <br>
+            <div class="wrapper">
+                <div class="call-1 call-out">
+                    <h4>Feature 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique itaque fugiat nam suscipit quasi asperiores
+                        odio quod quia, provident.</p>
+                </div>
+                <div class="call-2 call-out">
+                    <h4>Feature 2</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique itaque fugiat nam suscipit quasi asperiores
+                        odio quod quia, provident debitis! Voluptatum consequuntur adipisci commodi recusandae, laudantium
+                        suscipit eaque assumenda numquam.</p>
+                </div>
+                <div class="call-3 call-out">
+                    <h4>Feature 3</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit! Voluptatum consequuntur adipisci commodi recusandae,
+                        laudantium suscipit eaque assumenda numquam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
     <!-- Buttons -->
     <section>
         <div class="container">
@@ -84,7 +219,7 @@
     </section>
     <hr>
 
-    <!-- Example Layout -->
+    <!-- Forms Layout -->
     <section>
         <div class="container">
             <h2 class="text-center">Forms</h2>
@@ -112,6 +247,47 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- HTML Form Layout -->
+    <section>
+        <div class="container">
+            <h2 class="text-center">Basic HTML Form Using FlexBox</h2>
+            <P>In this example we are using flex box to make the input spread the full width of the container. The parent container
+                will be the Flex Box container and the input will use flex:1;
+            </P>
+            <br>
+            <p>
+                <small>Example follows below</small>
+            </p>
+            <br>
+            <style>
+                .form-row {
+                    padding: 0.5rem 0;
+                    display: flex;
+                }
+
+                label {
+                    padding-right: 0.5rem;
+                }
+
+                input {
+                    flex: 1;
+
+                }
+            </style>
+            <form>
+                <div class="form-row">
+                    <label for="name">Name: </label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-row">
+                    <label for="email">Email: </label>
+                    <input type="email" id="email">
+                </div>
+            </form>
         </div>
     </section>
     <hr>
