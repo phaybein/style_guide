@@ -35,30 +35,30 @@
     <hr>
 
     <!-- 3 Column Layout -->
-    <style>
-        .three-column-layout {
-            display: flex;
-        }
-
-        .flex-column {
-            flex: 1;
-            padding: 0 0.3rem;
-        }
-
-        .main-column {
-            flex: 3;
-            order: 2;
-        }
-
-        .sidebar-one {
-            order: 1;
-        }
-
-        .sidebar-two {
-            order: 3;
-        }
-    </style>
     <section>
+        <style>
+            .three-column-layout {
+                display: flex;
+            }
+
+            .flex-column {
+                flex: 1;
+                padding: 0 0.3rem;
+            }
+
+            .main-column {
+                flex: 3;
+                order: 2;
+            }
+
+            .sidebar-one {
+                order: 1;
+            }
+
+            .sidebar-two {
+                order: 3;
+            }
+        </style>
         <div class="container">
             <h2 class="text-center">3 Column Layout With Flexbox</h2>
             <P>Using Flexbox to create a three column layout. We will also move columns without changing the HTML and only using
@@ -100,45 +100,46 @@
     <hr>
 
     <!-- 3 Column Card Layout -->
-    <style>
-        @media screen and (min-width: 700px) {
-            .wrapper {
-                display: flex;
-                justify-content: space-between;
-            }
-        }
-
-        .call-out {
-            margin-bottom: 0.5rem;
-            padding: 1.5rem;
-        }
-
-        @media screen and (min-width: 700px) {
-            .call-out {
-
-                flex-basis: 30%;
-                margin-bottom: 0;
-
-            }
-        }
-
-
-
-
-
-        .call-1 {
-            background: lightcoral;
-        }
-
-        .call-2 {
-            background: lightblue;
-        }
-
-        .call-3 {
-            background: limegreen;
-        }
-    </style>
     <section>
+
+        <style>
+            @media screen and (min-width: 700px) {
+                .wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            .call-out {
+                margin-bottom: 0.5rem;
+                padding: 1.5rem;
+            }
+
+            @media screen and (min-width: 700px) {
+                .call-out {
+
+                    flex-basis: 30%;
+                    margin-bottom: 0;
+
+                }
+            }
+
+
+
+
+
+            .call-1 {
+                background: lightcoral;
+            }
+
+            .call-2 {
+                background: lightblue;
+            }
+
+            .call-3 {
+                background: limegreen;
+            }
+        </style>
         <div class="container">
             <h2 class="text-center">Three column card layout</h2>
             <P>This example will use Flexbox to create three equal cards with equal spacing between using flex-basis.</P>
@@ -197,6 +198,36 @@
     </section>
     <hr>
 
+    <!-- Center Item Layout -->
+    <section>
+        <style>
+            .center-wrapper {
+                background: #777;
+                color: #f7f7f7;
+                height: 600px;
+
+                display: flex;
+            }
+
+            h1 {
+                margin: auto;
+            }
+        </style>
+        <div class="container">
+            <h2 class="text-center">Center Item Within A Container</h2>
+            <P>Using Flexbox, we center an item within a container using two </P>
+            <br>
+            <p>
+                <small>Example follows below</small>
+            </p>
+            <br>
+            <div class="center-wrapper">
+                <h1>Centering in container</h1>
+            </div>
+        </div>
+    </section>
+    <hr>
+
     <!-- Checkbox -->
     <section>
         <div class="container">
@@ -215,6 +246,45 @@
                 <div class="checkbox__info media-body p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tenetur ipsam cumque sunt nulla adipisci.</div>
             </div>
             <br>
+        </div>
+    </section>
+    <hr>
+
+    <!-- Equal Sized Boxes Layout -->
+    <section>
+        <style>
+            .box-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            .box {
+                background: blue;
+                color: #f7f7f7;
+                font-size: 4rem;
+                height: 7rem;
+                line-height: 7rem;
+                margin-bottom: 1rem;
+                text-align: center;
+                width: 7rem;
+            }
+        </style>
+        <div class="container">
+            <h2 class="text-center">Equal Sized Boxes</h2>
+            <P>We are using Flexbox to space out and then stack these boxes which have a fixed width and height.</P>
+            <br>
+            <p>
+                <small>Example follows below</small>
+            </p>
+            <br>
+            <div class="box-container">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
         </div>
     </section>
     <hr>
