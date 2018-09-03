@@ -1,5 +1,5 @@
 @mixin mobileLand {
-    @media screen and (max-height: 500px) and (max-width: 736px) {
+    @media screen and (max-height: 500px) and (max-width: 737px) {
         @content;
     }
 }

@@ -19,12 +19,30 @@ body {
 
 // Navbar
 .navbar {
-    .nav-line {
-        width: 1.3rem;
-        height: 0.1rem;
-        background: $light;
-        display: inherit;
-        margin-bottom: 4px;
+    max-width: 1497px;
+
+    @include lgLaptop {
+        margin: 0 auto;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+
+        @include lgLaptop {
+            font-size: 30px;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+
+        .nav-line {
+            width: 1.3rem;
+            height: 0.1rem;
+            background: $light;
+            display: inherit;
+            margin-bottom: 4px;
+        }
     }
 
     .navbar-nav {
@@ -32,22 +50,55 @@ body {
 
         .nav-link {
             color: $light;
+
+            @include lgLaptop {
+                font-size: 16px;
+                padding: 0 30px;
+            }
         }
     }
 }
 
 // Header
 .header {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 50%), url(../img/header.png) no-repeat center/cover;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 50%), url(../img/header.jpg) no-repeat center/cover;
+    display: flex;
     height: 100vh;
     width: 100%;
     z-index: -1;
     position: absolute;
     top: 0;
 
+    @include tablet {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 50%), url(../img/header-tablet.jpg) no-repeat center/cover;
+    }
+
+    @include smLaptop {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 50%), url(../img/header-smLaptop.jpg) no-repeat center/cover;
+    }
+
+    @include lgLaptop {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 50%), url(../img/header-lgLaptop.jpg) no-repeat center/cover;
+    }
+
     .wrapper {
-        margin-top: 30vh;
+        margin: 11rem auto 0;
         padding: 0 1rem;
+
+        @include mobileLand {
+            margin: auto;
+        }
+
+        @include tablet {
+            margin: auto 0;
+            padding: 0 4rem;
+        }
+
+        @include lgLaptop {
+            margin: 450px auto 0;
+            padding-left: 278px;
+            width: 1920px;
+        }
 
         h1,
         p {
@@ -55,12 +106,32 @@ body {
             text-shadow: $text-shadow;
         }
 
+        h1 {
+            @include lgLaptop {
+                font-size: 70px;
+            }
+        }
+
         p {
             margin-bottom: 32px;
             opacity: 0.8;
+            max-width: 536px;
 
             @include mobileLand {
                 display: none;
+            }
+
+            @include lgLaptop {
+                margin: 0 0 32px;
+            }
+        }
+
+        .btn--light {
+            .btn__icon {
+                background: url(../icons/icon-calendar.png)no-repeat;
+                height: 24px;
+                margin-right: 14px;
+                width: 24px;
             }
         }
     }
@@ -72,6 +143,18 @@ body {
         position: absolute;
         bottom: 42px;
         right: -1rem;
+
+        @include mobileLand {
+            bottom: 45px;
+        }
+
+        @include tablet {
+            bottom: 44px;
+        }
+
+        @include lgLaptop {
+            right: 5%;
+        }
 
         .line {
             background: $light;
@@ -85,6 +168,10 @@ body {
             color: $light;
             display: inline;
             text-shadow: $text-shadow;
+
+            @include lgLaptop {
+                font-size: 16px;
+            }
         }
     }
 }
