@@ -40,11 +40,9 @@
 
 
 */
-
 /*****
     FLUID TEXT
 *****/
-
 html {
     font-size: 1rem;
 }
@@ -91,15 +89,14 @@ small {
 /* /////////////////////////////////////////////////////////////////
 //  LOAD FONT
 //////////////////////////////////////////////////////////////////  */
+// Quattrocento
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700|Quattrocento:400,700');
+$font-heading: didot,
+serif;
+$body-font: proxima nova,
+sans-serif;
 
-// palanquin
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Palanquin:300,400,700');
-$font-heading: 'Palanquin',
-sans-serif;
-$body-font: 'Open Sans',
-sans-serif;
 /* Load  */
-
 body {
     font-family: $body-font;
 }

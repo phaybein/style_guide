@@ -1,9 +1,11 @@
 %btn {
     border-radius: $border-radius;
+    cursor: pointer;
     display: inline-block;
     padding: 10px 15px;
     transition: $transition;
     min-width: 8rem;
+
     &:hover {
         text-decoration: none;
     }
@@ -15,6 +17,7 @@
     box-shadow: $box-shadow;
     color: setTextColor($primary);
     font-weight: bolder;
+
     &:hover {
         color: #fff;
         background: darken($primary, 5%);
@@ -26,6 +29,7 @@
     border: 0.01rem solid $primary;
     color: $primary;
     font-weight: lighter;
+
     &:hover {
         color: lighten($primary, 10);
     }
@@ -36,6 +40,7 @@
     color: $primary;
     opacity: 0.5;
     text-decoration: underline;
+
     &:hover {
         color: $primary;
         opacity: 1;
@@ -44,8 +49,17 @@
 
 .btn--light {
     @extend %btn;
-    background: darken($accent, 10);
-    color: setTextColor($accent);
+    background: $light;
+    color: setTextColor($light);
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 .btn--dark {

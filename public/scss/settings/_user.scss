@@ -1,30 +1,90 @@
-.home {
-    background: url(//images.pexels.com/photos/708440/pexels-photo-708440.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)no-repeat center;
-    background-attachment: fixed;
-    background-size: cover;
-    min-height: 43rem;
-    .dark-overlay {
-        display: flex;
+// Navbar
+/*
+    User Overrides
+*/
+h1,
+h2,
+p,
+a {
+    color: $primary;
+}
+
+p {
+    min-width: initial;
+}
+
+body {
+    background: #ccc;
+}
+
+// Navbar
+.navbar {
+    .nav-line {
+        width: 1.3rem;
+        height: 0.1rem;
+        background: $light;
+        display: inherit;
+        margin-bottom: 4px;
     }
-    &__inner {
-        margin: auto;
-    }
-    &__inner {
-        grid-template-columns: 1fr;
-        padding-top: 9rem;
-        @include tablet {
-            grid-template-columns: 2fr 1fr;
+
+    .navbar-nav {
+        text-shadow: $text-shadow;
+
+        .nav-link {
+            color: $light;
         }
     }
-    &__left {
-        display: none;
-        @include tablet {
-            display: block;
+}
+
+// Header
+.header {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 50%), url(../img/header.png) no-repeat center/cover;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+
+    .wrapper {
+        margin-top: 30vh;
+        padding: 0 1rem;
+
+        h1,
+        p {
+            color: $light;
+            text-shadow: $text-shadow;
         }
-    }
-    &__right {
-        .card-form {
+
+        p {
+            margin-bottom: 32px;
             opacity: 0.8;
+
+            @include mobileLand {
+                display: none;
+            }
+        }
+    }
+
+    .scroll {
+        display: flex;
+        align-items: center;
+        transform: rotate(-0.25turn);
+        position: absolute;
+        bottom: 42px;
+        right: -1rem;
+
+        .line {
+            background: $light;
+            display: inline-block;
+            height: 3px;
+            margin-right: 8px;
+            width: 36px;
+        }
+
+        p {
+            color: $light;
+            display: inline;
+            text-shadow: $text-shadow;
         }
     }
 }

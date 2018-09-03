@@ -20,6 +20,7 @@ img {
 .hide-on-small {
     display: none;
     margin-right: auto;
+
     @include tablet {
         display: initial;
     }
@@ -37,8 +38,4 @@ img {
 
 .text-accent {
     color: $accent;
-}
-
-.text-light-gray {
-    color: $light-gray;
 }
