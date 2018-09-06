@@ -149,7 +149,7 @@ body {
         }
 
         @include tablet {
-            bottom: 44px;
+            bottom: 50px;
         }
 
         @include lgLaptop {
@@ -171,6 +171,22 @@ body {
 
             @include lgLaptop {
                 font-size: 16px;
+            }
+        }
+    }
+}
+
+// Section-a
+.section-a {
+
+    // display: flex;
+    .left {}
+
+    .right {
+        .icons {
+            img {
+                width: 24px;
+                height: auto;
             }
         }
     }
