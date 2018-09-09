@@ -61,9 +61,13 @@ const port = 5000;
 
 // Index Route
 app.get('/', (req, res) => {
-    const title = 'Welcome';
+    const companyInfo = {
+        companyName: 'Surf.',
+        companyPhone1: 234
+    };
     res.render('index', {
-        title: title
+        companyName: companyInfo.companyName,
+        companyPhone1: companyInfo.companyPhone1
     });
 });
 
