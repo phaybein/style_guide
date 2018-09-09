@@ -9,17 +9,28 @@ a {
     color: $primary;
 }
 
+h2 {
+    @include lgLaptop {
+        font-size: 50px;
+    }
+}
+
 p {
     min-width: initial;
+
+    @include lgLaptop {
+        font-size: 20px;
+    }
 }
 
 body {
-    background: #ccc;
+    background: #f7f7f7;
 }
 
 // Navbar
 .navbar {
     max-width: 1497px;
+    z-index: 1;
 
     @include lgLaptop {
         margin: 0 auto;
@@ -38,7 +49,7 @@ body {
 
         .nav-line {
             width: 1.3rem;
-            height: 0.1rem;
+            height: 2px;
             background: $light;
             display: inherit;
             margin-bottom: 4px;
@@ -62,12 +73,8 @@ body {
 // Header
 .header {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 50%), url(../img/header.jpg) no-repeat center/cover;
-    display: flex;
     height: 100vh;
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-    top: 0;
+    padding-top: 0;
 
     @include tablet {
         background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 50%), url(../img/header-tablet.jpg) no-repeat center/cover;
@@ -82,11 +89,17 @@ body {
     }
 
     .wrapper {
-        margin: 11rem auto 0;
+        height: 100%;
         padding: 0 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
 
         @include mobileLand {
-            margin: auto;
+            align-items: center;
         }
 
         @include tablet {
@@ -95,7 +108,6 @@ body {
         }
 
         @include lgLaptop {
-            margin: 450px auto 0;
             padding-left: 278px;
             width: 1920px;
         }
@@ -107,13 +119,15 @@ body {
         }
 
         h1 {
+            margin-bottom: 0.5rem;
+
             @include lgLaptop {
                 font-size: 70px;
             }
         }
 
         p {
-            margin-bottom: 32px;
+            margin: 0 0 0.5rem;
             opacity: 0.8;
             max-width: 536px;
 
@@ -178,15 +192,66 @@ body {
 
 // Section-a
 .section-a {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
 
-    // display: flex;
-    .left {}
+    @include mobileLand {
+        padding: 1rem 0.5rem;
+    }
+
+    .left {
+        display: none;
+        flex-basis: 100%;
+        padding: 0.5rem;
+
+        @include tablet {
+            display: initial;
+            flex-basis: 48%;
+        }
+
+        img {
+            min-width: 270px;
+        }
+    }
 
     .right {
+        flex-basis: 100%;
+        padding: 0.5rem;
+
+        @include tablet {
+            flex-basis: 48%;
+        }
+
+        h2 {
+            margin-bottom: 1.125rem;
+        }
+
+        p {
+            margin-bottom: 4.625rem;
+
+            @include mobileLand {
+                margin-bottom: 1rem;
+            }
+        }
+
         .icons {
-            img {
-                width: 24px;
-                height: auto;
+            display: flex;
+            flex-flow: row wrap;
+
+            p {
+                margin: 0 0.5rem 0.5rem;
+
+                @include mobileLand {
+                    margin-right: 2.1875rem;
+                }
+
+                img {
+                    width: 24px;
+                    height: auto;
+                }
             }
         }
     }
