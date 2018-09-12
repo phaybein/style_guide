@@ -63,11 +63,17 @@ const port = 5000;
 app.get('/', (req, res) => {
     const companyInfo = {
         companyName: 'Surf.',
-        companyPhone1: 234
+        companyPhone1: 234,
+        twitter: '//twitter.com',
+        facebook: '//facebook.com',
+        instagram: '//instagram.com'
     };
     res.render('index', {
         companyName: companyInfo.companyName,
-        companyPhone1: companyInfo.companyPhone1
+        companyPhone1: companyInfo.companyPhone1,
+        twitter: companyInfo.twitter,
+        facebook: companyInfo.facebook,
+        instagram: companyInfo.instagram
     });
 });
 
